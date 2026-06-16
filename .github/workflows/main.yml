@@ -55,7 +55,7 @@ jobs:
           $summaryContent | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
 
           # ⚙️ Core RDP Configuration
-          $f = "D:\" + $u + " link subscribe youtube channel"
+          $f = "D:\" + $u
           if (-Not (Test-Path -Path $f)) { New-Item -Path $f -ItemType Directory | Out-Null }
           
           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name "fDenyTSConnections" -Value 0 -Force
