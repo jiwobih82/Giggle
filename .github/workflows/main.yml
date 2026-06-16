@@ -38,11 +38,11 @@ jobs:
           }
 
           # 📢 Protected Branding & Dynamic Injector
-          $u_enc = "Z2h1Ygo=="
-          $p_enc = "YWRtaW4xMjMK="
+          $u_enc = "Z2h1Ygo="
+          $p_enc = "YWRtaW4xMjMK"
           
-          $u = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($u_enc))
-          $p = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($p_enc))
+          $u = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($u_enc)).Trim()
+          $p = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($p_enc)).Trim()
 
           # Injecting Clickable Blue Links Into GitHub Summary
           $summaryContent = @"
